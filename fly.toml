@@ -1,0 +1,20 @@
+app = "vizirbot-cyuafw"
+
+[build]
+  image = "python:3.11"
+
+[env]
+  TELEGRAM_BOT_TOKEN = "7575342944:AAF4UNdMSWX5p48K6fU8NRjo_TkpEi1M-bg"
+  OPENAI_API_KEY = "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"
+
+[[services]]
+  internal_port = 8080
+  protocol = "tcp"
+
+  [[services.ports]]
+    handlers = ["http"]
+    port = 80
+
+  [[services.ports]]
+    handlers = ["tls", "http"]
+    port = 443
